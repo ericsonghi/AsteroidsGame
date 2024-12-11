@@ -11,7 +11,7 @@ public class Asteroid extends Floater {
 
         rotationSpeed = Math.random() * 6 - 4;
 
-        double directionInRadians = Math.toRadians(myPointDirection);
+        double directionInRadians = radians((float) myPointDirection);
         myXspeed = Math.cos(directionInRadians) * 2;
         myYspeed = Math.sin(directionInRadians) * 2;
     }
@@ -22,7 +22,7 @@ public class Asteroid extends Floater {
 
         pushMatrix();
         translate((float) myCenterX, (float) myCenterY);
-        rotate((float) Math.toRadians(myPointDirection));
+        rotate((float) radians((float) myPointDirection));
         beginShape();
         vertex(-0.6f * (float) size, -0.8f * (float) size);
         vertex(0.7f * (float) size, -0.4f * (float) size);
