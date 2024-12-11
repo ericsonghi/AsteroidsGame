@@ -1,5 +1,7 @@
-public class Spaceship extends Floater{
-  Spaceship(){
+public class Spaceship extends Floater {
+  private final double SpeedMax = 5.0;
+
+  Spaceship() {
     corners = 4;
     xCorners = new int[corners];
     xCorners[0] = 8;
@@ -12,10 +14,24 @@ public class Spaceship extends Floater{
     yCorners[2] = -8;
     yCorners[3] = 0;
     myColor = color(173, 54, 76);
-    myCenterX = width/2.0;
-    myCenterY = height/2.0;
+    myCenterX = width / 2.0;
+    myCenterY = height / 2.0;
     myXspeed = 0.0;
     myYspeed = 0.0;
     myPointDirection = 270;
+  }
+
+  public void move() {
+    if (myXspeed > SpeedMax){myXspeed = SpeedMax;} 
+    else if (myXspeed < -SpeedMax){myXspeed = -SpeedMax;}
+
+    if (myYspeed > SpeedMax){myYspeed = SpeedMax;}
+    else if (myYspeed < -SpeedMax) {myYspeed = -SpeedMax;}
+    super.move();
+  }
+
+  public void accelerate(double dAmount) {
+    super.accelerate(dAmount);
+    move();
   }
 }
