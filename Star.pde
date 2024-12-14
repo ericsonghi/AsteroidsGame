@@ -5,7 +5,7 @@ class distantStars{
     public distantStars(){
       myX = Math.random()*750;
       myY = Math.random()*750;
-      mySize = (int)(Math.random()*5 + 5);
+      mySize = (int)(Math.random()*5 + 3);
       myColor = color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
     }
     
