@@ -23,4 +23,3 @@ public class america extends Floater {
     myCenterY += myYspeed;
   }
 }
-
