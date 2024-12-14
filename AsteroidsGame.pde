@@ -73,7 +73,7 @@ void draw() {
       textSize(50);
       textAlign(CENTER);
       text("L rizz", 375, 375);
-      exit();
+      noLoop();
     }
   }
 }
