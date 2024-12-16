@@ -7,9 +7,9 @@ public class america extends Floater {
     myCenterY = Joe.myCenterY;
     myPointDirection = Joe.myPointDirection - 90;
 
-    double radians = radians((float) myPointDirection);
-    myXspeed = Math.cos(radians)*5;
-    myYspeed = Math.sin(radians)*5;
+    double rads = radians((float) myPointDirection);
+    myXspeed = Math.cos(rads)*5;
+    myYspeed = Math.sin(rads)*5;
   }
 
   public void show() {
